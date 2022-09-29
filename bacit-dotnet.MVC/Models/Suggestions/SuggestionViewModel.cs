@@ -9,7 +9,7 @@ namespace bacit_dotnet.MVC.Models.Suggestions
         public string Title { get; set; }
 
         public string Name { get; set; }
-        public int Team { get; set; }
+        public string Team { get; set; }
         public string Description { get; set; }
         public string TimeStamp { get; set; }
     }

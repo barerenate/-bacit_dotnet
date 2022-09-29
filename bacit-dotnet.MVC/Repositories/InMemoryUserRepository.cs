@@ -1,6 +1,7 @@
 ﻿namespace bacit_dotnet.MVC.Repositories
 {
-
+//tar imot en userentity og setter inn i en liste, objektliste
+//repository har ansvar for å lagre og hente data
 
     public class InMemoryUserRepository : IUserRepository
     {

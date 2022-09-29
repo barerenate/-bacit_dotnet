@@ -20,6 +20,7 @@ namespace bacit_dotnet.MVC.Controllers
         [HttpPost]
         public IActionResult Save(UserViewModel model) {
 
+         //userentity skal samsvare med en tabell i database
             UserEntity newUser = new UserEntity { 
                 Name = model.Name,
                 Email = model.Email,
