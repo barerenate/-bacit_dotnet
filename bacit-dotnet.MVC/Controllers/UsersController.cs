@@ -18,14 +18,14 @@ namespace bacit_dotnet.MVC.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Save(UserViewModel model) {
+        public IActionResult Save(UserViewModel model)
+        {
 
-            UserEntity newUser = new UserEntity { 
+            UserEntity newUser = new UserEntity
+            {
                 Name = model.Name,
-                Email = model.Email,
-                EmployeeNumber = model.EmployeeNumber,
+                EmployeeNumber = model.EmpNr,
                 Password = model.Password,
-                Role = model.Role,
                 Team = model.Team
             };
             userRepository.Save(newUser);
