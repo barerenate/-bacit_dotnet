@@ -28,7 +28,7 @@ namespace bacit_dotnet.MVC.Controllers
             return View(model);
             if (string.IsNullOrWhiteSpace(model.Name))
                 throw new ArgumentException();
-            sqlConnector.SetSuggestion(model);
+            sqlConnector.setSuggestion(model);
             return View(model);
         }
     }
