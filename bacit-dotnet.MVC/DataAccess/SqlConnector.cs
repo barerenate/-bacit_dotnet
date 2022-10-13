@@ -40,7 +40,6 @@ namespace bacit_dotnet.MVC.DataAccess
             return command.ExecuteReader();
         }
 
-<<<<<<< HEAD
         public void setSuggestion(SuggestionViewModel model)
         {
             using var connection = new MySqlConnection(config.GetConnectionString("MariaDb"));
@@ -52,20 +51,6 @@ namespace bacit_dotnet.MVC.DataAccess
         private void writeSuggestions(string query, MySqlConnection conn, SuggestionViewModel model)
         {
             using var command = conn.CreateCommand();
-=======
-        public void SetSuggestion(SuggestionViewModel model) {
-            using var connection = new MySqlConnection(config.GetConnectionString("MariaDb"));
-            connection.Open();
-
-            var query = "insert into forslag (tittel, navn, team, beskrivelse, tidspunkt) values(@Title, @Name, @Team, @Description, @TimeStamp);";
-            
-            WriteSuggestion(query, connection, model);
-        }
-
-        private void WriteSuggestion(string query, MySqlConnection con, SuggestionViewModel model) 
-        {
-            using var command = con.CreateCommand();
->>>>>>> 3253d016b1351f525ae0a514e394a62fed68a5ba
             command.CommandType = System.Data.CommandType.Text;
             command.CommandText = query;
             command.Parameters.AddWithValue("@Title", model.Title);
@@ -73,7 +58,6 @@ namespace bacit_dotnet.MVC.DataAccess
             command.Parameters.AddWithValue("@Team", model.Team);
             command.Parameters.AddWithValue("@Description", model.Description);
             command.Parameters.AddWithValue("@TimeStamp", model.TimeStamp);
-<<<<<<< HEAD
             command.Parameters.AddWithValue("@Plan", model.Plan);
             command.Parameters.AddWithValue("@Do", model.Do);
             command.Parameters.AddWithValue("@Study", model.Study);
@@ -88,11 +72,6 @@ namespace bacit_dotnet.MVC.DataAccess
             command.Parameters.AddWithValue("@Deadline", model.Deadline);
             command.ExecuteNonQuery();
         }
-=======
-            command.ExecuteNonQuery();
-        }
-
->>>>>>> 3253d016b1351f525ae0a514e394a62fed68a5ba
     }
 
 }
