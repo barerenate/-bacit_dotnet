@@ -1,7 +1,6 @@
 ﻿using bacit_dotnet.MVC.Models.Suggestions;
 using bacit_dotnet.MVC.DataAccess;
 using Microsoft.AspNetCore.Mvc;
-using bacit_dotnet.MVC.DataAccess;
 
 namespace bacit_dotnet.MVC.Controllers
 {
@@ -32,7 +31,6 @@ namespace bacit_dotnet.MVC.Controllers
             sqlConnector.setSuggestion(model);
             return View(model);
         }
-
     }
 
 }

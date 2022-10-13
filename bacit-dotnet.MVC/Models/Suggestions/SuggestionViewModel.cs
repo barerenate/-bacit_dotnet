@@ -7,7 +7,6 @@ namespace bacit_dotnet.MVC.Models.Suggestions
         [Required]
         [MinLength(7, ErrorMessage = "Tittel må være lengre")]
         public string Title { get; set; }
-
         public string Name { get; set; }
         public string Team { get; set; }
         public string Description { get; set; }
