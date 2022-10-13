@@ -18,16 +18,21 @@ namespace bacit_dotnet.MVC.Controllers
             return View();
         }
         [HttpPost]
-        public IActionResult Save(UserViewModel model) {
+        public IActionResult Save(UserViewModel model)
+        {
 
+<<<<<<< HEAD
+            UserEntity newUser = new UserEntity
+            {
+=======
          //userentity skal samsvare med en tabell i database
             UserEntity newUser = new UserEntity { 
+>>>>>>> 3253d016b1351f525ae0a514e394a62fed68a5ba
                 Name = model.Name,
-                Email = model.Email,
-                EmployeeNumber = model.EmployeeNumber,
+                EmpNr = model.EmpNr,
                 Password = model.Password,
-                Role = model.Role,
-                Team = model.Team
+                Team = model.Team,
+                Admin = model.Admin
             };
             userRepository.Save(newUser);
             return View("Index");
