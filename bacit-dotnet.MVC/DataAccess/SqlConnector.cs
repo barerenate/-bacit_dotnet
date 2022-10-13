@@ -15,7 +15,7 @@ namespace bacit_dotnet.MVC.DataAccess
 
         public IEnumerable<User> GetUsers()
         {
-            var reader = ReadData("Select emp_num, name, password, team, admin from emp;");
+            var reader = ReadData("Select empnr, name, password, team, admin from users;");
 
             var users = new List<User>();
             while (reader.Read())
@@ -25,7 +25,7 @@ namespace bacit_dotnet.MVC.DataAccess
                 user.Name = reader.GetString(1);
                 user.Team = reader.GetString(2);
                 user.Password = reader.GetString(3);
-                user.Admin = reader.GetString(4);
+                user.Admin = reader.GetBoolean(4);
             }
             return users;
         }

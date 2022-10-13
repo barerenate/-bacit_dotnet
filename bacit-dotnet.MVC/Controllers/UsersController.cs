@@ -24,9 +24,10 @@ namespace bacit_dotnet.MVC.Controllers
             UserEntity newUser = new UserEntity
             {
                 Name = model.Name,
-                EmployeeNumber = model.EmpNr,
+                EmpNr = model.EmpNr,
                 Password = model.Password,
-                Team = model.Team
+                Team = model.Team,
+                Admin = model.Admin
             };
             userRepository.Save(newUser);
             return View("Index");
